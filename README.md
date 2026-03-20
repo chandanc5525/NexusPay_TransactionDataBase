@@ -1,4 +1,4 @@
-#<img width="487" height="436" alt="Nexus_Pay_Logo" src="https://github.com/user-attachments/assets/dba03003-6d02-4da2-8119-b79685ac7401" />
+#<img width="100" height="100" alt="Nexus_Pay_Logo" src="https://github.com/user-attachments/assets/dba03003-6d02-4da2-8119-b79685ac7401" />
 
 # **Project: NexusPay – High‑Performance Transaction Platform**
 
