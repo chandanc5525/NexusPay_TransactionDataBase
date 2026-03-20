@@ -27,3 +27,9 @@ NexusPay is a rapidly growing transaction app that enables users to send/receive
 Design an enterprise DBMS for NexusPay that serves as the single source of truth for all financial movements, user balances, and merchant settlements. The system must guarantee ACID compliance, support high‑throughput concurrent transactions, automate fraud detection rules, and provide executive dashboards with millisecond latency for critical metrics.
 
 ---
+
+<img width="1225" height="677" alt="NexusPay_Mission" src="https://github.com/user-attachments/assets/8a6fc62f-3d86-4497-a0e9-5aa709aea434" />
+
+
+
+---
