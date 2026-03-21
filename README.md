@@ -8,27 +8,70 @@
 
 ## **Business Scenario:**
 
-NexusPay is a rapidly growing transaction app that enables users to send/receive money, make merchant payments, manage virtual cards, and invest in short‑term instruments. Starting as a peer‑to‑peer payment service, it now processes millions of transactions daily. The legacy data layer—built on a simple relational database with minimal normalization—is struggling to maintain consistency, throughput, and real‑time visibility.
+NexusPay is a fast-scaling fintech platform enabling P2P transfers, merchant payments, virtual cards, and micro-investments, processing millions of transactions daily.
+
+The current legacy database lacks proper normalization, transaction control, and scalability, resulting in data inconsistencies, delayed fraud detection, reconciliation issues, and poor concurrency handling.
+
+As NexusPay grows, there is a critical need to design a robust, scalable, and ACID-compliant DBMS that ensures data integrity, real-time processing, and regulatory compliance, while supporting high transaction throughput.
 
 ---
 
 ## **The Pain Points**
 
-1. Transaction Inconsistency – Without proper atomicity and isolation, double‑spending and duplicate transactions occasionally occur, eroding user trust.
+The system must eliminate:
 
-2. Fraud Detection Lag – Fraud patterns are identified only after batch processing, leading to financial losses and compliance fines.
+1. Duplicate and inconsistent transactions
 
-3. Balance Reconciliation Delays – End‑of‑day reconciliation takes hours, delaying settlement with partners and causing operational bottlenecks.
+2. Delayed fraud detection
 
-4. Scalability Bottlenecks – The current schema uses heavy locking, making concurrent writes impossible during peak load (e.g., festive sales).
+3. Slow reconciliation processes
 
-5. Audit & Reporting Gaps – Regulatory bodies require real‑time access to transaction trails; current reporting is manual and error‑prone.
+4. Concurrency bottlenecks during peak load
+
+5. Inefficient audit and reporting mechanisms
 
 ## **The Architect’s Mission**
 
-Design an enterprise DBMS for NexusPay that serves as the single source of truth for all financial movements, user balances, and merchant settlements. The system must guarantee ACID compliance, support high‑throughput concurrent transactions, automate fraud detection rules, and provide executive dashboards with millisecond latency for critical metrics.
 
----
+Design an enterprise-grade DBMS that:
+
+1. Ensures Transaction Integrity
+
+* Implement full ACID compliance
+
+* Prevent double-spending and partial updates
+
+2. Supports High Concurrency
+
+* Enable parallel transaction processing
+
+* Use row-level locking and isolation levels
+
+3. Enables Real-Time Fraud Detection
+
+* Design rule-based fraud detection tables
+
+* Use triggers/procedures for instant flagging
+
+4. Maintains Accurate Balances
+
+* Implement ledger-based (double-entry) system
+
+* Ensure real-time balance updates
+
+5. Provides Scalable Architecture
+
+* Design for high throughput
+
+* Use indexing, partitioning, and optimized queries
+
+6. Ensures Audit & Compliance
+
+* Maintain immutable transaction logs
+
+* Support regulatory reporting
+
+  ---
 
 <img width="1225" height="677" alt="NexusPay_Mission" src="https://github.com/user-attachments/assets/8a6fc62f-3d86-4497-a0e9-5aa709aea434" />
 
